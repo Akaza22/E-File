@@ -100,3 +100,33 @@ function bugReport(){
 function setting(){
     window.location.href = "../Setting/setting.html"
 }
+
+function generatePDF() {
+    const doc = new jsPDF();
+
+    // Mendapatkan data dari tabel
+    const table = document.getElementById('employee-table');
+    const rows = table.querySelectorAll('tbody tr');
+
+    // Mengatur header tabel
+    const headers = ['User', 'Employees Entry', 'Position'];
+    const data = rows.map(row => {
+        const rowData = Array.from(row.querySelectorAll('td'), cell => cell.textContent);
+        return rowData;
+    });
+
+    // Membuat tabel dalam dokumen PDF
+    doc.autoTable({
+        head: [headers],
+        body: data,
+        theme: 'grid',
+        styles: {
+            overflow: 'linebreak',
+            fontSize: 10,
+            cellPadding: 5,
+        },
+    });
+
+    // Menyimpan dokumen PDF
+    doc.save('employees.pdf');
+}

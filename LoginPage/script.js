@@ -7,6 +7,21 @@ document.getElementById("register-form").addEventListener("submit", function(eve
     window.location.href = "./login.html";
 });
 
-function login(){
-    window.location.href = "../index.html";
-}
+
+
+;
+
+function validated(){
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    var dummyEmail = "rpl5@gmail.com";
+    var dummyPassword = "12345";
+
+    if (email === dummyEmail && password === dummyPassword) {
+      alert("Login berhasil!");
+      // Mengalihkan ke halaman index.html setelah login berhasil
+    } else {
+      alert("Email atau password salah. Silakan coba lagi.");
+    }
+  }

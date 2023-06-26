@@ -100,3 +100,10 @@ function bugReport(){
 function setting(){
     window.location.href = "../Setting/setting.html"
 }
+
+// Ambil elemen yang diperlukan
+const employeeCount = document.getElementById('employee-count');
+const tableRows = document.querySelectorAll('.table-data .order table tbody tr');
+
+// Perbarui jumlah employee list
+employeeCount.textContent = tableRows.length;

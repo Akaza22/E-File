@@ -113,17 +113,10 @@
 				<li>
 					<i class='bx bxs-file-blank' ></i>
 					<span class="text">
-						<h3>1020</h3>
+						<h3 id="file-count">0</h3>
 						<p>Incoming File</p>
 					</span>
-				</li>
-				<li>
-					<i class='bx bxs-group' ></i>
-					<span class="text">
-						<h3>2834</h3>
-						<p>Employees</p>
-					</span>
-				</li>
+				</li>	
 				<!-- <li>
 					<i class='bx bxs-dollar-circle' ></i>
 					<span class="text">
@@ -135,64 +128,13 @@
 
 
 			<div class="table-data">
-				<div class="order">
-					<div class="head">
-						<h3>Employees List</h3>
-						<i class='bx bx-search' ></i>
-						<i class='bx bx-filter' ></i>
-					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>User</th>
-								<th>Employees Entry</th>
-								<th>Position</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<img src="../img/lion bipsi.jfif">
-									<p>lion bipsi</p>
-								</td>
-								<td>28-09-2019</td>
-								<td><span class="status completed">Front-End Developer</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="../img/penaldo.jfif">
-									<p>Penaldo</p>
-								</td>
-								<td>23-06-2019</td>
-								<td><span class="status completed">Back-End Developer</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="../img/hariono.jfif">
-									<p>Hariono</p>
-								</td>
-								<td>22-10-2021</td>
-								<td><span class="status completed">IT Support</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="../img/embappe.jfif">
-									<p>embappeh</p>
-								</td>
-								<td>05-03-2020</td>
-								<td><span class="status completed">Project Manager</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="../img/henhen.jfif">
-									<p>Jack henhen grealish</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status completed">UI/UX Designer</span></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+				<form id="upload-form">
+					<input type="file" id="file-input">
+        			<button type="submit">Unggah</button>
+				</form>
+
+				<h2>Daftar File yang Diunggah:</h2>
+    			<ul id="file-list"></ul>
 			</div>
 		</div>
 		<!-- end File management -->

@@ -100,3 +100,37 @@ function bugReport(){
 function setting(){
     window.location.href = "../Setting/setting.html"
 }
+
+// Ambil elemen yang diperlukan
+const uploadForm = document.getElementById('upload-form');
+const fileInput = document.getElementById('file-input');
+const fileList = document.getElementById('file-list');
+const fileCount = document.getElementById('file-count');
+
+// Inisialisasi jumlah file
+let totalFiles = 0;
+
+// Ketika formulir di-submit
+uploadForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // Mencegah reload halaman
+    
+    const files = fileInput.files; // Ambil file yang diunggah
+
+    // Periksa apakah ada file yang dipilih
+    if (files.length > 0) {
+        // Iterasi melalui setiap file
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const li = document.createElement('li');
+            li.textContent = file.name;
+            fileList.appendChild(li);
+            totalFiles++; // Tambahkan jumlah file
+        }
+        
+        // Perbarui jumlah file pada elemen HTML
+        fileCount.textContent = totalFiles;
+    }
+    
+    // Bersihkan input file setelah unggah
+    fileInput.value = '';
+});

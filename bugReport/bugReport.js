@@ -23,9 +23,9 @@ menuBar.addEventListener('click', function () {
 })
 
 
-
-
-
+function logout() {
+	window.location.href ="../LoginPage/login.html";
+}
 
 
 const searchButton = document.querySelector('#content nav form .form-input button');
@@ -43,11 +43,6 @@ searchButton.addEventListener('click', function (e) {
 		}
 	}
 })
-
-function logout() {
-    window.location.href = "../LoginPage/login.html";
-}
-
 
 
 if(window.innerWidth < 768) {
