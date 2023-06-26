@@ -101,7 +101,7 @@ function filemanagement(){
 }
 
 function dashboard(){
-	window.location.href = "../dashboard.html"
+	window.location.href = "../index.html"
 }
 
 function userManagement(){
