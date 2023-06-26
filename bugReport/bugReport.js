@@ -22,33 +22,8 @@ menuBar.addEventListener('click', function () {
 	sidebar.classList.toggle('hide');
 })
 
-
-async function logout() {
-	const token = localStorage.getItem("token");
-	if (!token) {
-			throw new Error("Token tidak ditemukan");
-	}
-
-	try {
-			const response = await fetch("http://127.0.0.1:3333/api/v1/logout", {
-					method: "POST",
-					headers: {
-							"Content-Type": "application/json",
-							"Authorization": `Bearer ${token}`
-					}
-			});
-
-			if (response.ok) {
-					localStorage.removeItem("token");
-					alert("Logout berhasil");
-					window.location.href = "../login.html";
-			} else {
-					throw new Error("Terjadi kesalahan saat melakukan logout");
-			}
-	} catch (error) {
-			console.error("Error:", error);
-			alert("Terjadi kesalahan saat melakukan logout");
-	}
+function logout() {
+	window.location.href = "../LoginPage/login.html";
 }
 
 
@@ -101,7 +76,7 @@ function filemanagement(){
 }
 
 function dashboard(){
-	window.location.href = "../dashboard.html"
+	window.location.href = "../index.html"
 }
 
 function userManagement(){
