@@ -7,10 +7,6 @@ document.getElementById("register-form").addEventListener("submit", function(eve
     window.location.href = "./login.html";
 });
 
-
-
-;
-
 function validated(){
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
@@ -21,6 +17,7 @@ function validated(){
     if (email === dummyEmail && password === dummyPassword) {
       alert("Login berhasil!");
       // Mengalihkan ke halaman index.html setelah login berhasil
+      window.location.href = "../index.html";
     } else {
       alert("Email atau password salah. Silakan coba lagi.");
     }
